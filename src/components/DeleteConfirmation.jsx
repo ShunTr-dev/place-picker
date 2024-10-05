@@ -9,7 +9,7 @@ export default function DeleteConfirmation({ onConfirm, onCancel }) {
         return () => {
             clearTimeout(timer);
         };
-    }, []);
+    }, [onConfirm]); // when you use a function in a dependency array, you should wrap it in a useCallback hook
 
     return (
         <div id="delete-confirmation">
